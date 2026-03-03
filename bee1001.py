@@ -11,6 +11,4 @@ def pegarValores():
 
     print(f"X = {valorFinal}")
     
-
-
 pegarValores()
