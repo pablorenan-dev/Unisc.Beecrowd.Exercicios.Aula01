@@ -1,24 +1,32 @@
+def main():
+    
+    while True:
+        x, y = pegarValores()
+
+        if x == y: break
+
+        verificarDecrescente(x, y)
+
 def pegarValores():
     valor = input()
 
-    organizarValores(valor)
+    return organizarValores(valor)
 
 def organizarValores(valor):
     valorOrganizado = valor.split()
     x = int(valorOrganizado[0])
     y = int(valorOrganizado[1])
 
-    verificarDecrescente(x, y)
+    return x, y
 
 def verificarDecrescente(x, y):
     if x > y:
         mostrarValores("Decrescente")
     elif y > x:
         mostrarValores("Crescente")
-    else:
-        mostrarValores("")
+        
 
 def mostrarValores(resultado):
     print(resultado)
 
-pegarValores()
+main()
